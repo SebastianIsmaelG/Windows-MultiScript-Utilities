@@ -22,7 +22,7 @@ if "%option%"=="1" (
     pause
     goto menu
 ) else if "%option%"=="2" (
-    set ruta_destino="C:\Program Files\Common Files"
+    set ruta_destino="C:\Program Files\WinRAR"
     (       
             echo RAR registration data
             echo Federal Agency for Education
@@ -37,7 +37,8 @@ if "%option%"=="1" (
             echo 64416495d4c55a0cc82d402110498da970812063934815d81470829275
     ) > "%CD%\rarreg.key"
        if exist "%CD%\rarreg.key" (
-        xcopy "%CD%\rarreg.key" !ruta_destino! /H /R /Y  ahora aqui tiene que copiar al winrar directorio
+            xcopy "%CD%\rarreg.key" !ruta_destino! /H /R /Y 
+            echo Clave almacenada y registrada con exito
         
         ) else (
             echo No se pudo copiar el archivo. Ejecute como administrador y reintente
@@ -49,6 +50,12 @@ if "%option%"=="1" (
     taskkill -IM explorer.exe -f
     explorer.exe
     echo Se ha devuelto el menú contextual con exito
+    pause
+    goto menu
+) else if "%option%"=="4" (
+    reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v BingSearchEnabled /t REG_DWORD /d 0 /f
+
+    echo Se han eliminado las busquedas de bing en el Inicio
     pause
     goto menu
 ) else (
