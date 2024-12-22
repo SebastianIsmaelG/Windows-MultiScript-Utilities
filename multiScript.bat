@@ -10,7 +10,6 @@ echo 1 : Activar windows/Office clave KMS
 echo 2 : Activar WinRaR clave estudiante
 echo 3 : Devolver el menu contextual de windows 10 (Solo para windows 11 o superior)
 echo 4 : Desactivar la busqueda de Bing en el menu inicio
-
 echo 0 : Salir
 echo --------------------------------------
 :menu
@@ -54,7 +53,6 @@ if "%option%"=="1" (
     goto menu
 ) else if "%option%"=="4" (
     reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v BingSearchEnabled /t REG_DWORD /d 0 /f
-
     echo Se han eliminado las busquedas de bing en el Inicio
     pause
     goto menu
