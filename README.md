@@ -9,4 +9,4 @@ Windows multiscript Utilities es un archivo que recopila codigos de activacion o
  - 2: Activar WinRaR clave estudiante 
  - 3: Devolver el menu contextual de windows 10 (Solo para windows 11 o superior)
  - 4: Desactivar la busqueda de Bing en el menu inicio
-
+ - 5: Devolver visor de fotos clasico de windows 10 (Solo windows 11 o superior)
